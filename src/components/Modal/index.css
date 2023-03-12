@@ -1,0 +1,97 @@
+.modal-container {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.4),
+    rgba(120, 120, 120, 0.4),
+    rgba(0, 0, 0, 0.4)
+  );
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-subcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform: scale(0.75);
+  transition: all 100ms ease-in-out;
+}
+
+.modal-subcontainer.open {
+  transform: scale(1);
+}
+
+.modal-innercontainer {
+  width: 40%;
+  height: 60%;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.modal-icon-container {
+  float: right;
+}
+
+.modal-icon {
+  width: 20px;
+  margin: 15px;
+  cursor: pointer;
+  transition: scale 50ms ease-in;
+}
+
+.modal-icon:hover {
+  scale: 125%;
+}
+
+.modal-details-container {
+  height: 100%;
+}
+.modal-details-container > div {
+  padding: 10px 20px;
+}
+
+.modal-name {
+  font-size: xx-large;
+}
+
+.modal-address-label,
+.modal-phone-label,
+.modal-website-label {
+  font-size: x-large;
+}
+
+.modal-address-subcontainer {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-street,
+.modal-city,
+.modal-zipcode {
+  font-size: medium;
+}
+
+.modal-phone,
+.modal-website {
+  font-size: large;
+}
+
+@media only screen and (max-width: 900px) {
+  .modal-innercontainer {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .modal-innercontainer {
+    width: 75%;
+  }
+}

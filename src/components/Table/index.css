@@ -1,0 +1,94 @@
+.table-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.table-subcontainer {
+  margin: auto;
+}
+
+.table-search-container {
+  margin: 0 0 20px 0;
+  width: 40%;
+  border: 1.5px solid black;
+  border-radius: 10px;
+}
+
+.table-search-subcontainer {
+  display: flex;
+}
+
+.table-search-icon {
+  font-size: larger;
+  margin: 5px 0 5px 5px;
+}
+
+.table-input {
+  width: 90%;
+  margin: 5px;
+  font-size: large;
+  border: none;
+  outline: none;
+}
+
+.table-table {
+  margin: auto;
+  width: 100vh;
+  height: 50vh;
+  overflow: auto;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.table-chevron-icon-container {
+  float: right;
+}
+
+.table-chevron-icon {
+  font-size: x-large;
+  cursor: pointer;
+  transition: color 100ms linear;
+}
+
+.table-chevron-icon:hover {
+  color: red;
+}
+
+.table-row {
+  cursor: pointer;
+  transition: background-color 75ms ease-in;
+}
+
+.table-row:hover {
+  background-color: rgb(169, 207, 254);
+}
+
+.table-data-cell:nth-child(1) {
+  text-align: center;
+}
+
+.table-data-cell {
+  border: none;
+  outline: none;
+  font-size: medium;
+}
+
+.table-nodata-row {
+  text-align: center;
+}
+
+.table-nodata-cell {
+  font-size: larger;
+}
+
+.table-nodata-span {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.table-trash-icon {
+  font-size: xxx-large;
+  margin: 10px auto;
+}
