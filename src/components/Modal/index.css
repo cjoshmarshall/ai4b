@@ -68,7 +68,7 @@
 }
 
 .modal-address-subcontainer {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -84,6 +84,12 @@
   font-size: large;
 }
 
+@media only screen and (max-width: 1050px) {
+  .modal-innercontainer {
+    width: 50%;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .modal-innercontainer {
     width: 60%;
@@ -93,5 +99,41 @@
 @media only screen and (max-width: 600px) {
   .modal-innercontainer {
     width: 75%;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  .modal-details-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .modal-name {
+    grid-column: 1 / span 2;
+  }
+  .modal-address-container {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  .modal-name {
+    font-size: x-large;
+  }
+
+  .modal-address-label,
+  .modal-phone-label,
+  .modal-website-label {
+    font-size: larger;
+  }
+  .modal-street,
+  .modal-city,
+  .modal-zipcode {
+    font-size: small;
+  }
+
+  .modal-phone,
+  .modal-website {
+    font-size: medium;
   }
 }

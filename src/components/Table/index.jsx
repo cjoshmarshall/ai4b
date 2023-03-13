@@ -53,69 +53,71 @@ function Table({ data }) {
               />
             </div>
           </div>
-          <table className="table-table">
-            <thead className="table-header">
-              <tr className="table-header-row">
-                <th className="table-header-cell">
-                  ID
-                  <span className="table-chevron-icon-container">
-                    <HiChevronUpDown className="table-chevron-icon" />
-                  </span>
-                </th>
-                <th className="table-header-cell">
-                  Name ID
-                  <span className="table-chevron-icon-container">
-                    <HiChevronUpDown className="table-chevron-icon" />
-                  </span>
-                </th>
-                <th className="table-header-cell">
-                  Username ID
-                  <span className="table-chevron-icon-container">
-                    <HiChevronUpDown className="table-chevron-icon" />
-                  </span>
-                </th>
-                <th className="table-header-cell">
-                  Email ID
-                  <span className="table-chevron-icon-container">
-                    <HiChevronUpDown className="table-chevron-icon" />
-                  </span>
-                </th>
-              </tr>
-            </thead>
-            <tbody className="table-body">
-              {data.length !== 0 ? (
-                searchData.length !== 0 ? (
-                  searchData.map((items) => (
-                    <tr
-                      key={items.id}
-                      className="table-row"
-                      onClick={() => handleModalOpen(items.id)}
-                    >
-                      <td className="table-data-cell">{items.id}</td>
-                      <td className="table-data-cell">{items.name}</td>
-                      <td className="table-data-cell">{items.username}</td>
-                      <td className="table-data-cell">{items.email}</td>
+          <div className="table">
+            <table className="table-table">
+              <thead className="table-header">
+                <tr className="table-header-row">
+                  <th className="table-header-cell">
+                    ID
+                    <span className="table-chevron-icon-container">
+                      <HiChevronUpDown className="table-chevron-icon" />
+                    </span>
+                  </th>
+                  <th className="table-header-cell">
+                    Name ID
+                    <span className="table-chevron-icon-container">
+                      <HiChevronUpDown className="table-chevron-icon" />
+                    </span>
+                  </th>
+                  <th className="table-header-cell">
+                    Username ID
+                    <span className="table-chevron-icon-container">
+                      <HiChevronUpDown className="table-chevron-icon" />
+                    </span>
+                  </th>
+                  <th className="table-header-cell">
+                    Email ID
+                    <span className="table-chevron-icon-container">
+                      <HiChevronUpDown className="table-chevron-icon" />
+                    </span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="table-body">
+                {data.length !== 0 ? (
+                  searchData.length !== 0 ? (
+                    searchData.map((items) => (
+                      <tr
+                        key={items.id}
+                        className="table-row"
+                        onClick={() => handleModalOpen(items.id)}
+                      >
+                        <td className="table-data-cell">{items.id}</td>
+                        <td className="table-data-cell">{items.name}</td>
+                        <td className="table-data-cell">{items.username}</td>
+                        <td className="table-data-cell">{items.email}</td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr className="table-nodata-row">
+                      <td className="table-nodata-cell" colSpan={4}>
+                        <span className="table-nodata-span">
+                          <IoTrashBinOutline className="table-trash-icon" />
+                          <span>No Data</span>
+                        </span>
+                      </td>
                     </tr>
-                  ))
+                  )
                 ) : (
-                  <tr className="table-nodata-row">
-                    <td className="table-nodata-cell" colSpan={4}>
-                      <span className="table-nodata-span">
-                        <IoTrashBinOutline className="table-trash-icon" />
-                        <span>No Data</span>
-                      </span>
+                  <tr>
+                    <td colSpan={4}>
+                      <Loader />
                     </td>
                   </tr>
-                )
-              ) : (
-                <tr>
-                  <td colSpan={4}>
-                    <Loader />
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       {modal && <Modal data={user} />}

@@ -32,13 +32,22 @@
   outline: none;
 }
 
-.table-table {
-  margin: auto;
-  width: 100vh;
-  height: 50vh;
-  overflow: auto;
+.table {
   border: 1px solid black;
   border-radius: 5px;
+  height: 50vh;
+  overflow-y: scroll;
+}
+
+.table-table {
+  width: 100vh;
+}
+
+.table-header-row {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
 }
 
 .table-chevron-icon-container {
@@ -91,4 +100,10 @@
 .table-trash-icon {
   font-size: xxx-large;
   margin: 10px auto;
+}
+
+@media only screen and (max-width: 1250px) {
+  .table-table {
+    width: 150vh;
+  }
 }
